@@ -1,6 +1,6 @@
 .SILENT:
 
-PRJ_NAME=dates
+PRJ_NAME=dates-be
 API_DOC_FILE=./docs/api.md
 
 .PHONY: all
