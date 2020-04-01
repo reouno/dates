@@ -1,0 +1,65 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 26c0c5ea160416825e2b6b3add638e1458e6a9820bbdd6a56250b161a13083f1
+
+name:           dates
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/dates#readme>
+homepage:       https://github.com/githubuser/dates#readme
+bug-reports:    https://github.com/githubuser/dates/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/dates
+
+library
+  exposed-modules:
+      App.Server
+  other-modules:
+      Paths_dates
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , servant-server
+    , text
+  default-language: Haskell2010
+
+executable dates-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_dates
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , dates
+    , warp
+  default-language: Haskell2010
+
+test-suite dates-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_dates
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , dates
+  default-language: Haskell2010
